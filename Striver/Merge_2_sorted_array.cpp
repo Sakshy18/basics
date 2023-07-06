@@ -48,3 +48,19 @@ public:
 //i=0;k=0;j=1;
 //1,4,7,8,9,10;
 //1<3 so j=0;i=0;k=0
+
+// Traverse through nums2 and append its elements to the end of nums1 starting from index m.
+// Sort the entire nums1 array using sort() function.
+// Complexity
+// Time complexity: O((m+n)log(m+n))
+// due to the sort() function
+
+// Space complexity: O(1)
+// code:
+//   void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//         for (int j = 0, i = m; j<n; j++){
+//             nums1[i] = nums2[j];
+//             i++;
+//         }
+//         sort(nums1.begin(),nums1.end());
+//     }
