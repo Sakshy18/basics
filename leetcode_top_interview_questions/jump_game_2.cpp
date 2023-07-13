@@ -6,3 +6,20 @@
 // Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
 // Input: nums = [2,3,1,1,4]
 // Output: 2
+ int jump(vector<int>& nums) {
+        int jump=0;
+        int farthest=0;
+        int curr=0;
+
+        for(int i=0;i<nums.size()-1;i++)
+        {
+            farthest=max(farthest,nums[i]+i);
+            if(i==curr)
+            {
+                curr=farthest;
+                jump++;
+            }
+        }
+        return jump;
+
+    }
