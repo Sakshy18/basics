@@ -8,16 +8,27 @@ he has a name, health and levels ,hero also has behaviour traits: dancing, defen
 ->CLASS:user defined data-type, object is an instance of class
 code:
 class Hero{
+
+public:    
 char name[100];
 int health;
 int level;
+
+void print()
+{
+    cout<<"level"<<level;
+}
 
 
 };
 
 int main()
 {
-    Hero h1;  //object of class hero , object takes size based on properties in class.
+    Hero soham;  //object of class hero , object takes size based on properties in class.
+    cout<<"health is "<<soham.health<<endl;   //to acess properties of class
+    soham.health=70;
+    soham.level='A'; //to put value
+    
     return 0;
 }
 

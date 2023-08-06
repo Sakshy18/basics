@@ -1,0 +1,31 @@
+//public,private,protected are 3 types  of data members
+//by default private lagega
+
+PUBLIC:
+
+public ke data members can be accessed class ke andar bhi aur bahar bhi
+class Hero{
+
+public:    
+char name[100];
+int health;
+int level;
+
+
+};
+
+int main()
+{
+    Hero soham;  
+    cout<<"health is "<<soham.health<<endl;   //to acess properties of class
+    
+    return 0;
+}
+
+
+PRIVATE:
+//classs ke andar hi access kar payega, not bahar neither in main
+
+
+PROTECTED:
+//
