@@ -1,0 +1,29 @@
+Q.what is oop?
+-> a type of programming paradign which revolves around object, 
+,bringing my program close to real world so my code becomes more manageable, reusable, readability.
+object?
+->an entity which has state or property and behaviour. eg:laptop
+eg: u are playing  game, usme ek character is hero:
+he has a name, health and levels ,hero also has behaviour traits: dancing, defense,attack etc
+->CLASS:user defined data-type, object is an instance of class
+code:
+class Hero{
+char name[100];
+int health;
+int level;
+
+
+};
+
+int main()
+{
+    Hero h1;  //object of class hero , object takes size based on properties in class.
+    return 0;
+}
+
+
+//object in short is astitva of class it gives value to the template//class is a template
+//if empty class and no properties, toh size should be 0, but it prints 1 byte
+//obj is given 1 byte of memory
+//if u wanna include a class in alag file, u can include it using : #include"class_name.cpp" in header
+
