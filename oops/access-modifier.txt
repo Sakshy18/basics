@@ -28,4 +28,4 @@ PRIVATE:
 
 
 PROTECTED:
-//
+//can also be accessed by derived class members by members of the same class, and friend functions too
