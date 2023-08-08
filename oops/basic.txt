@@ -38,3 +38,4 @@ int main()
 //obj is given 1 byte of memory
 //if u wanna include a class in alag file, u can include it using : #include"class_name.cpp" in header
 
+GETTER & SETTER
