@@ -1,0 +1,51 @@
+//creates  a data member that belongs to class, to access it u dont need object as it isnt dependant on obj;
+//must be initialised pehle bahar of class
+//data type classname :: feild name= value;
+class Hero{
+
+char *name;
+int health;
+char level;
+static int timetocomplete;
+
+Hero()
+{
+name=new char[100] //dynamically array allocation upar kiya hota toh wo heap me allocate hota to waste hota memory
+}
+
+void setname(char name[])
+{
+    strcpy(this->name,name);
+
+}
+
+void print()
+{
+    cout<<this->name;
+    cout<<this->health;
+    cout<<this->level;
+}
+
+static int random()  //static member function
+{
+return timetocomplete;
+//if use other members toh gives error//other than static members kiye to error;
+
+
+}
+
+};
+int Hero::timetocomplete=5;
+int main()
+{
+
+    cout<<Hero::timetocomplete<<endl; //prints 5
+    //to access static member function
+
+
+   
+
+}
+STATIC FUNCTOINS
+// no need to call objects, and dont have this keyword (As it points to current obj)
+//static function can only access static members

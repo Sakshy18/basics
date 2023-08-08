@@ -94,10 +94,12 @@ int main()
 
 Hero(Hero &temp)
 {
-    char ch *=new char(strlen(temp.name)+1);   //allocating memory to new characater array named ch and usme values copy ki .so now if i chnage value in hero 1 toh badme hero 2 ki value wont change
+    char ch *=new char(strlen(temp.name)+1);   //allocating memory to new characater array named ch and usme values copy ki .so now if i chnage value in hero 1 toh badme hero 2 ki value wont chnage
     strcpy(ch,temp.name);  ///copying ch me temp ka name
     this->name=ch;
-
+ 
 }
 
+COPY ASSIGNMENT OPERATOR:(=)
+hero1=hero2; //hero 1 me hero 2 ki sari values dal di
 

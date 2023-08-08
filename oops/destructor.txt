@@ -1,0 +1,13 @@
+//to dealocate memory , when object is going to be out of scope we free memory by usin g destructor
+//class create krte hi destructor get so=automatically called//no para//no return type
+~Hero()
+{
+    cout<<"destructor called";
+
+
+}
+//destructor called for statically allocated object destructor is called automatically
+//dynamic object ke liye manually u have to call detructor 
+//to do that we write delete objname;
+//consturctor and destructor called only once 
+//const keyword in obj creation
