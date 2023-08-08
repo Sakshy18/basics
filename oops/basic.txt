@@ -39,3 +39,42 @@ int main()
 //if u wanna include a class in alag file, u can include it using : #include"class_name.cpp" in header
 
 GETTER & SETTER
+getter is for fetching,setter can be used to put some conditions also like if else etc
+function inside class which can be used to access pribvate mmebers of class;
+class Hero{
+
+private:    
+int health;
+
+public:
+int level;
+
+char gethealth()
+{
+    return health;
+}
+
+void sethealth(int h)
+{
+    health=h; //setting h 
+}
+
+};
+
+int main()
+{
+    Hero soham;   //instantiating an object 
+    Hero ramesh;
+   
+    ramesh.sethealth(70);
+    soham.level='A'; //as it was public it can be fetched dirrectly
+    cout<<"health is "<<soham.health<<endl;  //since health is private it cant be accessed directtly
+    //to access health we have to use getters and setters
+    //now as we used  getter we ecan access directtly
+    cout<<ramesh.gethealth()<<endl;  //output will be 70
+
+    return 0;
+}
+
+
+
