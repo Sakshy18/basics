@@ -64,8 +64,15 @@ void sethealth(int h)
 int main()
 {
     Hero soham;   //instantiating an object 
-    Hero ramesh;
-   
+    Hero ramesh;  //static allocation
+   Hero * mahesh= new Hero;  //dynamic memory allocation
+   //mahesh pointing to hero type in heap memory 
+    cout<<"level is"<<(*mahesh).level<<endl;
+     cout<<"level is"<<(*mahesh).gethealth()<<endl;
+    //sirf b is address obj is at adddress so we just referenced it using pointer *mahesh isiliye
+    //mahesh->gethealth() is an alternative to the same
+
+
     ramesh.sethealth(70);
     soham.level='A'; //as it was public it can be fetched dirrectly
     cout<<"health is "<<soham.health<<endl;  //since health is private it cant be accessed directtly
@@ -75,6 +82,6 @@ int main()
 
     return 0;
 }
-
+//padding and greedy allignment readability
 
 

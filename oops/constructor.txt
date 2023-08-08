@@ -1,0 +1,103 @@
+//whenevr u create an object toh its constructor is called
+//invokes at object creation and has no return type
+//current object ka address is stored in this
+
+eg u have a constructor parameterised 
+Hero(int health)
+{
+    health =health ;
+}
+
+//isme health parameter n=me hi khudki value khudme dal di 
+//what we wanted was health of object me parameter ki value jaye
+//but since parameter and data member ka name same hai its getting confued so we use this-> here
+this is a pointers that points to current object
+this->health represents ramesh ka health ie our static member
+this->health=health //gives value of parameter health to ramesh ka health
+Hero(int health)
+{
+    this->health=health;
+}
+
+
+//multilple parameterised contrucutor can be created.
+//copy constructor
+alos called by default, it copies the things inside object into other objecteg:
+Hero suresh;
+Hero ramesh(suresh); //so all the values in suresh are copied in ramesh
+
+to make one 
+Hero(Hero & temp) //pass by reference as call by value karungi to infinte pass hota rahega from temp to hero and hero to temp
+{
+    this->health=temp.health();
+
+}
+
+//once u write any contructor manually jo deualt in compiler me hota hai that wont work
+
+SHALOW AND DEEP COPY:
+//default copy contructor shallow copy karta hai;
+****SHALLOW:
+class Hero{
+
+char *name;
+int health;
+char level;
+
+Hero()
+{
+name=new char[100] //dynamically array allocation upar kiya hota toh wo heap me allocate hota to waste hota memory
+}
+
+void setname(char name[])
+{
+    strcpy(this->name,name);
+
+}
+
+void print()
+{
+    cout<<this->name;
+    cout<<this->health;
+    cout<<this->level;
+}
+
+};
+
+int main()
+{
+
+    Hero hero1;
+    hero1.sethealth(12);
+    hero1.setlevel('D');
+    char name[7]="sakshii";
+    hero1.setname(name);
+
+    hero1.print();
+
+
+    //use default copy contructor to make other hero
+    Hero hero2(hero1);  //both do same job
+    Hero hero2=hero1;  //both do same job
+
+    hero1.name[0]='B';  //changing first letter of name from s to B
+
+    hero1.print(); //will print name is bakshii 
+
+    hero2.print(); //will also print name as bakshii
+   // because we copied address of har array in hero2
+    //that is accessing same memory with 2 names ie hero1 nd hero2 
+
+}
+//deep copy me isi array ki dusri copy hogi
+//toh we make our own constructor for deepcopy
+
+Hero(Hero &temp)
+{
+    char ch *=new char(strlen(temp.name)+1);   //allocating memory to new characater array named ch and usme values copy ki .so now if i chnage value in hero 1 toh badme hero 2 ki value wont change
+    strcpy(ch,temp.name);  ///copying ch me temp ka name
+    this->name=ch;
+
+}
+
+
