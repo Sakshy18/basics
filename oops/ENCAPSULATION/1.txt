@@ -1,0 +1,10 @@
+wrapping up data member nd functions into a single entity is called encapsulation
+fully encapsulated class: all data members are private(same class me hi access kar sakte directly)
+ADV:
+ENCAPSULATION is information/data hiding therefore security increases
+code resuability
+class can be read only (if only getter is given and no setter)
+unit testing manageable
+
+
+
